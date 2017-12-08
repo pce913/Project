@@ -101,10 +101,31 @@ int main(){
 			break;
 		}
 	}
+	if (cx == sx && cy == sy){  //모스크바에 바로 인접한 블럭이 끊어져있을 경우 처리.
+		for (int i = 0; i < 4; i++){
+			int nx = cx + dx[i];
+			int ny = cy + dy[i];
+			for (int j = 0; j < 4; j++){
+				int nnx = nx + dx[j];
+				int nny = ny + dy[j];
+				char nnm = M[nnx][nny];
+				if (!isBlock[nnm] || !isOk(nnx, nny))
+					continue;
+
+				if (dir[nnm][j] != -1){   //j
+					cdir = i;   //i
+					cx = nx;   //nx
+					cy = ny;   //ny
+					break;
+				}
+			}
+		}
+	}
+
 	//진행방향 0.동쪽 ,  1.북쪽 ,  2.서쪽 ,  3.남쪽
 
 	//2. 끊어진점 찾기.
-	int zx = -1, zy = -1;
+	int zx = cx, zy = cy;
 	char z_char;
 	while (M[cx][cy] != 'Z'){ 
 		char cm = M[cx][cy];
