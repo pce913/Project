@@ -1,4 +1,4 @@
-//2751¹ø: ¼ö Á¤·ÄÇÏ±â2 ¹®Á¦·Î °Ë¼ö ¿Ï·á.
+//2751ë²ˆ: ìˆ˜ ì •ë ¬í•˜ê¸°2 ë¬¸ì œë¡œ ê²€ìˆ˜ ì™„ë£Œ.
 template <typename T>
 void swap(T& x, T& y){
 	T temp = x;
@@ -7,12 +7,12 @@ void swap(T& x, T& y){
 }
 
 template <typename T>
-void sort(T arr,int start,int end) { //vector¸¦ Á¤·Ä½ÃÅ°°í ½ÍÀ»¶© T¸¦ T&·Î ¹Ù²ãÁà¾ß ÇÑ´Ù.
+void sort(T arr[],int start,int end) { //vectorë¥¼ ì •ë ¬ì‹œí‚¤ê³  ì‹¶ì„ë• Të¥¼ T&ë¡œ ë°”ê¿”ì¤˜ì•¼ í•œë‹¤.
 	if (start >= end)
 		return;
 	int left = start;
 	int right = end;
-	int pivot = arr[(start + end) / 2];
+	T pivot = arr[(start + end) / 2];
 	while (true) {
 		while (arr[left] < pivot){
 			left++;
