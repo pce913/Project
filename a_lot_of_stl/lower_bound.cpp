@@ -1,9 +1,8 @@
-//12015¹ø: °¡Àå ±ä Áõ°¡ÇÏ´Â ºÎºĞ ¼ö¿­2 ¹®Á¦·Î °Ë¼ö ¿Ï·á.
 template <typename T>
-int lower_bound(T arr,int start,int end,int value){   //arr°¡ vectorÀÏ¶§´Â T& ·Î ÇØÁÖ¾î¾ß ÇÑ´Ù.
+int lower_bound(T arr[],int start,int end,T value){   //arrê°€ vectorì¼ë•ŒëŠ” T& ë¡œ í•´ì£¼ì–´ì•¼ í•œë‹¤.
 	int left = start;
 	int right = end;
-	int ans = end + 1;   //lower_bound´Â value°ªÀÌ ¾øÀ» °æ¿ì v.end() ¸¦ °¡¸®Å°¹Ç·Î ÀÌ·¸°Ô ÃÊ±âÈ­ ÇÑ´Ù.
+	int ans = end + 1;   //lower_boundëŠ” valueê°’ì´ ì—†ì„ ê²½ìš° v.end() ë¥¼ ê°€ë¦¬í‚¤ë¯€ë¡œ ì´ë ‡ê²Œ ì´ˆê¸°í™” í•œë‹¤.
 	while(left <= right){
 		int mid = (left + right) >> 1;
 		if (value <= arr[mid]){
