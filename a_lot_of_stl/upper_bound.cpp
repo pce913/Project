@@ -1,13 +1,13 @@
-//7469¹ø: k¹øÂ° ¼ıÀÚ ¹®Á¦·Î °Ë¼ö ¿Ï·á.
+//7469ë²ˆ: kë²ˆì§¸ ìˆ«ì ë¬¸ì œë¡œ ê²€ìˆ˜ ì™„ë£Œ.
 template <typename T>
-int upper_bound(T arr, int start, int end, int value){   //arr°¡ vectorÀÏ¶§´Â T& ·Î ÇØÁÖ¾î¾ß ÇÑ´Ù.
+int upper_bound(T arr[], int start, int end, T value){   //arrê°€ vectorì¼ë•ŒëŠ” T& ë¡œ í•´ì£¼ì–´ì•¼ í•œë‹¤.
 	int left = start;
 	int right = end;
-	int ans = 0;     //lower_bound¿Í´Â ´Ù¸£°Ô ÃÊ±âÈ­¸¦ 0À¸·Î ÇØÁà¾ß ÇÑ´Ù.
+	int ans = 0;     //lower_boundì™€ëŠ” ë‹¤ë¥´ê²Œ ì´ˆê¸°í™”ë¥¼ 0ìœ¼ë¡œ í•´ì¤˜ì•¼ í•œë‹¤.
 	while (left <= right){
 		int mid = (left + right) >> 1;
 		if (arr[mid] <= value){
-			ans = mid + 1;   //upper_bound´Â ¾î¶²°ª º¸´Ù Å«°Íµé Áß ¹Ù·Î ´ÙÀ½ À§Ä¡¸¦ °¡¸®Å°°í ÀÖÀ¸¹Ç·Î mid+1; 
+			ans = mid + 1;   //upper_boundëŠ” ì–´ë–¤ê°’ ë³´ë‹¤ í°ê²ƒë“¤ ì¤‘ ë°”ë¡œ ë‹¤ìŒ ìœ„ì¹˜ë¥¼ ê°€ë¦¬í‚¤ê³  ìˆìœ¼ë¯€ë¡œ mid+1; 
 			left = mid + 1;
 		}
 		else{
