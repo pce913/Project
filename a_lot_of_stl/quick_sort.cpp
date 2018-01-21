@@ -16,7 +16,7 @@ void sort(T arr[],int start,int end) { //vector를 정렬시키고 싶을땐 T�
 	T pivot = arr[(start + end) / 2];
 	while (true) {
 		while (arr[++left] < pivot);
-		while (arr[--right] > pivot);    //operator < 를 사용하기 위해선 사실 pivot < arr[right] 이게 더 낫다.
+		while (pivot < arr[--right]);    //operator < 를 사용하기 위해선 사실 pivot < arr[right] 이게 더 낫다.
 		if (left >= right)
 			break;
 		swap(arr[left], arr[right]);
