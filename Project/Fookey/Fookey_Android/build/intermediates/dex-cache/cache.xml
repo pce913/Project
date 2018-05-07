@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Chan\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v3.0.2\5d4eb08a326bdbd7fbbddc769666898c9936b282\MPAndroidChart-v3.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5d4eb08a326bdbd7fbbddc769666898c9936b282">
+        <dex dex="C:\Users\Chan\Downloads\Fookey1.7\app\build\intermediates\pre-dexed\debug\MPAndroidChart-v3.0.2_c6724854d29e6ea8103a2135b95a9190d4233c8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Chan\.android\build-cache\3afc3decaadd6afdcc48fee52615d83ccdad9b44\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="961fd3e3365d2cc969249dce399b68be3ab0c55d">
+        <dex dex="C:\Users\Chan\Downloads\Fookey1.7\app\build\intermediates\pre-dexed\debug\classes_7d47d2234f7d5bd7583a34362d8df0ddab76dafe.jar" />
+    </item>
+
+</items>
