@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.soyoung.butler">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".application.ApplicationController"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/playstore_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateAlwaysHidden">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".loginfo.LoginInfo"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".loginfo.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".register.SignupActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".attraction.AttractionMainView"
+            android:label="@string/title_activity_attraction_main_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".detail.DetailMain"
+            android:label="@string/title_activity_detail_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBxPfgAsB6IN682jrtwLvVFrJ22HJHTNbk" />
+
+        <activity
+            android:name=".journey_day.JourneyDayMain"
+            android:label="@string/title_activity_journey_day_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".select_attraction.SelectionActivityMain"
+            android:label="@string/title_activity_selection_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".select_spot.SelectSpotMain"
+            android:label="@string/title_activity_select_spot_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".drag.DragActivity" />
+        <activity
+            android:name=".recommend_path.RecommandPathMain"
+            android:label="@string/title_activity_recommand_path_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.RecommendPage"
+            android:label="@string/title_activity_recommend_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.RecommendPage2"
+            android:label="@string/title_activity_recommend_page2"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

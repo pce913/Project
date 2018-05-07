@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_journey_day_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.soyoung.butler.journey_day.JourneyDayMain"
+    tools:showIn="@layout/app_bar_journey_day_main">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="147dp"
+            android:background="#000000">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="147dp"
+                android:id="@+id/backgroundimg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="19dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NEW YORK"
+                    android:id="@+id/temperature_city"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="12dp"
+                    android:textSize="6pt"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/temperature_time"
+                    android:text="9:34 PM"
+                    android:textColor="#ffffff"
+                    android:textSize="7pt"
+                    android:layout_marginTop="4dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/temperature"
+                        android:text="1˚C "
+                        android:textSize="35pt"
+                        android:textColor="#ffffff"/>
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="250dp"
+                        android:id="@+id/temperature_image"
+                        android:layout_marginTop="-7dp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="오늘은 설레는 뉴욕 여행 첫날!"
+                android:layout_marginTop="21dp"
+                android:gravity="center"
+                android:textSize="7pt"
+                android:textColor="#3e3b3a"/>
+
+            <LinearLayout
+                android:id="@+id/firstLine_3"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="50dp"
+                android:layout_row="0"
+                android:background="@drawable/shape" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:id = "@+id/imageLayout1">
+
+                    <TextView
+                        android:text="1일차"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/textView" />
+
+                    <ImageView
+                        android:id="@+id/firstLineImageView"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/dot" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="130dp"
+                    android:text="오늘 저녁은 뉴욕식 햄버거 어떠세요?"
+                    android:textSize="5pt"
+                    android:textColor="#727272"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="53dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="140dp"
+                        android:layout_alignParentRight="true"
+                        android:text="일정 변경"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.google.android.gms.maps.MapFragment" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

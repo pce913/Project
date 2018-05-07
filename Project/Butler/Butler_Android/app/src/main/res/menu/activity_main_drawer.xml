@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/edit_profile"
+                android:icon="@drawable/edit_drawer"
+                android:title="프로필 수정" />
+            <item
+                android:id="@+id/travel_schedule"
+                android:icon="@drawable/travel_schedule_drawer"
+                android:title="여행 일정 조회" />
+            <item
+                android:id="@+id/write_drawer"
+                android:icon="@drawable/write_drawer"
+                android:title="후기 남기기" />
+            <item
+                android:id="@+id/notice"
+                android:icon="@drawable/notice_drawer"
+                android:title="공지사항" />
+            <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/feedback_drawer"
+                android:title="피드백 남기기" />
+
+        </group>
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="로그아웃" />
+        </menu>
+    </item>
+
+</menu>

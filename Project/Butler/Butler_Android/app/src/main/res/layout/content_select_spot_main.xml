@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_select_spot_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.soyoung.butler.select_spot.SelectSpotMain"
+    tools:showIn="@layout/app_bar_select_spot_main"
+    android:background="@drawable/selectedtravel_background">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="38dp"
+                            android:textSize="9pt"
+                            android:id="@+id/selectext1"
+                            android:text="선택된 필수 관광지"
+                            android:textColor="#ffffff"
+                            />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_below="@+id/selectext1"
+                            android:layout_marginTop="30dp"
+                            android:id="@+id/recycler_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        </android.support.v7.widget.RecyclerView>
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/smalladdlandmarkbutton"
+                            android:id="@+id/button_test"
+                            android:scaleType="center"
+                            android:layout_alignTop="@+id/selectext1"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/line"
+                            android:textColor="#ffffff"
+                            android:textSize="6pt"
+                            android:id="@+id/textView"
+                            android:layout_below="@+id/selectext1"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+
+                    </RelativeLayout>
+
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/line"
+                        android:textColor="#f0f0f0"
+                        android:textSize="9pt"/>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="38dp"
+                            android:layout_gravity="center"
+                            android:textSize="9pt"
+                            android:id="@+id/selectext"
+                            android:text="선택된 필수 관광지"
+
+                            android:textColor="#ffffff"
+                            />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_below="@+id/selectext"
+                            android:layout_marginTop="30dp"
+                            android:id="@+id/recycler_bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        </android.support.v7.widget.RecyclerView>
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="center"
+                            android:background="@drawable/smalladdlandmarkbutton"
+                            android:layout_alignTop="@+id/selectext"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/button2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/line"
+                            android:textColor="#ffffff"
+                            android:textSize="6pt"
+                            android:layout_below="@+id/selectext"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/textView3"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="31dp">
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+
+            android:background="@drawable/selectedtravel_recommend"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="31dp"
+            android:layout_marginEnd="31dp" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:background="@drawable/selectedtravel_addwish"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="31dp"
+            android:layout_marginStart="31dp" />
+
+    </RelativeLayout>
+</RelativeLayout>
