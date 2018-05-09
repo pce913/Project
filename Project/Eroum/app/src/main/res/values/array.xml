@@ -1,9 +1,0 @@
-<resources>
-    <string-array name="sch">
-        <item>미취학</item>
-        <item>초등학교</item>
-        <item>중학교</item>
-        <item>고등학교</item>
-        <item>일반</item>
-    </string-array>
-</resources>
