@@ -25,27 +25,16 @@ struct vector{
 	}
 	void push_back(T x){
 		if (n == sz){
-			vector<T> t;   //선언과 동시에 대입을 하면 왠지 모르겠지만 레퍼런스 형태가 된다. 
-			t = *this;    //따라서 두줄로 분리 시켰다.
 			sz *= 2;
+			T* t = new T[sz];
+			for (int i = 0; i < n; i++)
+				t[i] = arr[i];
 			delete[] arr;
-			arr = new T[sz];
-			for (int i = 0; i < t.size(); i++){
-				arr[i] = t[i];
-			}
+			arr = t;
 		}
 		arr[n++] = x;
 	}
 
-	void operator=(const vector<T>& t){   //여기에 붙는 const들은 다 없애야만 내부에서 resize, size와 같은 함수 호출이 가능하다.
-		n = t.n;
-		sz = t.sz;
-		delete[] arr;
-		arr = new T[sz];
-		for (int i = 0; i < n; i++){  //넣는건 n만큼만 넣는다.
-			arr[i] = t[i];
-		}
-	}
 	T& operator[](const int& i)const{
 		return arr[i];
 	}
@@ -57,9 +46,6 @@ struct vector{
 	}
 	void clear(){
 		n = 0;
-		sz = DEFAULT_SZ;
-		delete[] arr;
-		arr = new T[sz];
 	}
 	void pop_back(){
 		n--;
