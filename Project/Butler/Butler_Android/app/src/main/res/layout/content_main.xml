@@ -1,0 +1,223 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/backgroundimage"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.soyoung.butler.main.MainActivity"
+        tools:showIn="@layout/app_bar_main"
+        android:weightSum="1"
+        android:onClick="linearOnClick">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background_1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="220dp"
+                    android:layout_height="85dp"
+                    android:background="@drawable/mytravelplanner"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="320dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/button04"/>
+                <EditText
+                    android:layout_width="290dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="30dp"
+                    android:hint="여행할 도시를 검색해주세요"
+                    android:id="@+id/city"
+
+                    android:windowSoftInputMode="stateAlwaysHidden"
+                    android:maxLines="1"
+                    android:background="@null"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:textSize="7pt"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:id="@+id/linearlayout1">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioGroup1"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="75dp"
+                        android:layout_height="22dp"
+                        android:id="@+id/ch1"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/main_button_checked_a"/>
+                    <RadioButton
+                        android:layout_width="75dp"
+                        android:layout_height="22dp"
+                        android:id="@+id/ch2"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/main_button_unchecked_b"/>
+                    <RadioButton
+                        android:layout_width="75dp"
+                        android:layout_height="22dp"
+                        android:id="@+id/ch3"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/main_button_unchecked_c"/>
+                    <RadioButton
+                        android:layout_width="75dp"
+                        android:layout_height="22dp"
+                        android:id="@+id/ch4"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/main_button_unchecked_d"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <Button
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:text="검색"
+                    android:id="@+id/searchBtn"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/searchbutton13"
+                    android:layout_marginBottom="24dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="700dp"
+            android:orientation="vertical"
+            android:background="@drawable/backgroundimage">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="14dp"
+                    android:textSize="9pt"
+                    android:textColor="#ffffff"
+                    android:text="NEW YORK"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#ffffff"
+                    android:text="추천코스"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_marginTop="10dp"/>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="172dp"
+                    app:ci_height="3dp"
+                    app:ci_width="3dp"
+                    app:ci_drawable="@drawable/indicator_selector"
+                    app:ci_drawable_unselected="@drawable/indicator_unselector"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/indicator">
+                </me.relex.circleindicator.CircleIndicator>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="14dp"
+                    android:textSize="9pt"
+                    android:textColor="#ffffff"
+                    android:text="LA"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#ffffff"
+                    android:text="추천코스"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"/>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="172dp"
+                    app:ci_height="3dp"
+                    app:ci_width="3dp"
+                    app:ci_drawable="@drawable/indicator_selector"
+                    app:ci_drawable_unselected="@drawable/indicator_unselector"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/indicator2">
+                </me.relex.circleindicator.CircleIndicator>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

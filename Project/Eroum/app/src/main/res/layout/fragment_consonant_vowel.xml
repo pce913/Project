@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="36dp"
+        android:text="자음/모음 말하기"
+        android:textColor="#000000"
+        android:textSize="27dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@+id/textView2"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="18dp"
+        android:text="그림과 영상을 보며 자음과 모음을 말해보세요!"
+        android:textColor="@color/textBlack"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/listView3"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"></ListView>
+
+            <ListView
+                android:id="@+id/listView4"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"></ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridView
+                android:id="@+id/gridView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="34dp"
+                android:layout_marginRight="34dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:layoutAnimation="@layout/animation_mediator"
+                android:numColumns="5"
+                android:persistentDrawingCache="animation|scrolling"
+                android:stretchMode="columnWidth"></GridView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

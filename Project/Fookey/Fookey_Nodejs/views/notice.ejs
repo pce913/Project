@@ -1,0 +1,80 @@
+<html>
+  <head>
+      <title><%=title %></title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"  media="screen,projection"/ />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script>
+        function insertqueryexecute(){
+            var idxnum =  document.getElementById("idxnum").value;
+            var content =  document.getElementById("content").value;
+            $.ajax({
+                type: 'get',
+                url: "/manage/notice/add/"+idxnum+"/"+content,
+                dataType : 'html' ,
+                success: function(data) {
+                    Materialize.toast(data, 3000);
+                },
+                error : function(request, status, error){
+                    Materialize.toast('**error** 쿼리 적용 실패'+error, 3000);
+                }
+            });
+        }
+        function queryexecute(categorynum,collumn,newdata,event){
+            var code = event.keyCode || event.which;
+            if(code == 13){
+                console.log(categorynum+" "+newdata);
+                //alert("query change : "+idxnum + " "+ collumn +" "+newdata);
+                $.ajax({
+                    type: 'get',
+                    url: "./notice/"+collumn+"/"+categorynum+"/"+newdata,
+                    dataType : 'html' ,
+                    success: function(data) {
+                        Materialize.toast(data, 3000);
+                    },
+                    error : function(request, status, error){
+                        Materialize.toast('**error** 쿼리 적용 실패', 3000);
+                    }
+                });
+            }
+        }
+    </script>
+    <div class="row ceter-align">
+        <div class="card col s12 teal-text" style="margin : 1rem 1rem 1rem 1rem">
+            <h5>가맹점 메니져</h5>
+            <a class="material-icons waves-effect" href="./<%=--length %>">chevron_left</a><%=++length %> 페이지<a class="material-icons waves-effect"  href="./<%=++length %>">chevron_right</a>
+            <table class="highlight bordered">
+                <thead>
+                    <tr>
+                        <td><input id="idxnum"/></td>
+                        <td><input id="content"/></td>
+                        <td><div onClick=insertqueryexecute() class="btn teal">insert</div></td>
+                    </tr>
+                    <tr>
+                        <th class="teal-text" data-field="idxnum">idxnum</th>
+                        <th class="teal-text" data-field="content">content</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i<docu.length ; i++){ %>
+                    <tr>
+                        <td><input onkeypress=queryexecute("<%=docu[i]._id %>","idxnum",this.value,event) value="<%=docu[i].idxnum%>" key="<%=docu[i]._id %>"/></td>
+                        <td><input onkeypress=queryexecute("<%=docu[i]._id %>","content",this.value,event) value="<%=docu[i].content%>" key="<%=docu[i]._id %>"/></td>
+                        <td><input value="<%=docu[i].time %>" key="<%=docu[i]._id %>"/></td>
+                        <td>1</td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </body>
+</html>

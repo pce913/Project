@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp">
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="35dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity=""
+                android:layout_marginTop="5dp"
+                android:text="여행 시작"
+                android:id="@+id/txt"
+                android:textSize="7pt"
+                android:textColor="#ffffff"/>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn"
+                android:background="@drawable/button09"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity=""
+                android:layout_marginTop="5dp"
+                android:text="여행 끝"
+                android:id="@+id/txt2"
+                android:textSize="7pt"
+                android:textColor="#ffffff"/>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn2"
+                android:background="@drawable/button09"/>
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:text="저장"
+            android:id="@+id/savebtn"
+            android:background="#dfdfdf"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/firstLine"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="17dp"
+        android:layout_row="0"
+        android:background="@drawable/shape" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id = "@+id/imageLayout1">
+
+            <TextView
+                android:text="1일차"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/textView" />
+
+            <ImageView
+                android:id="@+id/firstLineImageView"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/dot" />
+        </LinearLayout>
+
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:id ="@+id/line_iv"/>-->
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondLine"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:text="2일차"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageView
+
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/dot" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdLine"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:text="3일차"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageView
+
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/dot" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fourthLine"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:text="4일차"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageView
+
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/dot" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/trashCan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete_icon"/>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerViewDot" />
+
+
+</LinearLayout>

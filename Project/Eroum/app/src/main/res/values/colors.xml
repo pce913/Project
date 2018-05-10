@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFDA6F</color>
+    <color name="colorPrimaryDark">#FEC22A</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name ="black">#000000</color>
+    <color name="line">#939597</color>
+    <color name="toolbar">#FFDA6F</color>
+    <color name="textGray">#58585B</color>
+    <color name="lineBlack">#808284</color>
+    <color name="textBlack">#404041</color>
+    <color name="noiseColor">#F1F1F2</color>
+    <color name="noiseBtn">#80BBBDC0</color>
+    <color name="gridColor">#80FBAF3F</color>
+    <color name="btnColor">#F48C88</color>
+    <color name="mint">#801EBDC9</color>
+    <color name="trans">#30FFFFFF</color>
+
+</resources>
